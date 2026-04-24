@@ -162,3 +162,29 @@ if submitted:
 
     except Exception as e:
         st.error(f"Prediction failed: {e}")
+
+st.markdown("""
+<div class='card'>
+
+<h3>Understanding Your Result</h3>
+
+<p>Your <b>predicted score</b> estimates your academic performance, while your <b>risk probability</b> shows your likelihood of facing academic challenges.</p>
+
+<ul>
+<li><b>Safe:</b> You are currently performing well, but continued effort is important.</li>
+<li><b>At Risk:</b> You may need to improve your study habits to avoid poor performance.</li>
+</ul>
+
+<p><i>If your probability is close to the threshold, you are in a borderline zone and should take action early.</i></p>
+
+<p><b>How to improve:</b></p>
+<ul>
+<li>Increase your study hours</li>
+<li>Improve class attendance</li>
+<li>Participate more actively in class</li>
+</ul>
+
+<p>Small improvements in these areas can significantly reduce your risk.</p>
+
+</div>
+""", unsafe_allow_html=True)
